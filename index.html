@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nosso Encontro ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div id="hearts"></div>
+
+<main class="container">
+
+<div class="card">
+
+<div class="progress-container">
+<div class="progress-bar"></div>
+</div>
+
+<!-- STEP 1 -->
+<section class="step active">
+<h1>Tenho uma pergunta:</h1>
+
+<p class="subtitle">aceita sair comigo?</p>
+
+<div class="buttons">
+<button class="btn btn-primary" id="btn-sim">Sim ❤️</button>
+<button class="btn btn-secondary" id="btn-nao">Não 😅</button>
+</div>
+</section>
+
+<!-- STEP 2 -->
+<section class="step">
+<h1>Escolha um dia 📅</h1>
+
+<div class="calendar-header">
+<button id="prev-month">‹</button>
+<h2 id="month-label"></h2>
+<button id="next-month">›</button>
+</div>
+
+<div class="calendar-grid" id="calendar-grid"></div>
+
+<div class="buttons">
+<button class="btn btn-primary" id="next-date" disabled>Continuar</button>
+</div>
+</section>
+
+<!-- STEP 3 -->
+<section class="step">
+<h1>Escolha um horário 🕒</h1>
+
+<div id="time-grid" class="grid"></div>
+
+<div class="buttons">
+<button class="btn btn-primary" id="next-time" disabled>Continuar</button>
+</div>
+</section>
+
+<!-- STEP 4 -->
+<section class="step">
+<h1>O que gostaria de comer? 🍕</h1>
+
+<div id="food-grid" class="grid"></div>
+
+<div id="custom-food-box">
+<input id="custom-food-input" type="text" placeholder="Outra opção...">
+</div>
+
+<div class="buttons">
+<button class="btn btn-primary" id="next-food" disabled>Continuar</button>
+</div>
+</section>
+
+<!-- STEP 5 -->
+<section class="step">
+<h1>Resumo ❤️</h1>
+
+<div id="summary"></div>
+
+<div class="buttons">
+<button class="btn btn-primary" id="confirm-btn">Confirmar ❤️</button>
+</div>
+</section>
+
+</div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+</body>
+</html>
